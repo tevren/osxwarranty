@@ -1,5 +1,5 @@
 require "osxwarranty/version"
 
-module Osxwarranty
+module OSXwarranty
   # Your code goes here...
 end
