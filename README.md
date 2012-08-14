@@ -1,7 +1,6 @@
 # OSXwarranty
 
-TODO: Write a gem description
-
+This gem brings together glarizza's ruby script for parsing warranty info from Apple and chilcote's ASD check.
 ## Installation
 
 Add this line to your application's Gemfile:

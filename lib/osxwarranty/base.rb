@@ -15,6 +15,7 @@ module OSXwarranty
 			response_body = response.content
 			repair_covered = response_body.split('warrantyPage.warrantycheck.displayHWSupportInfo').last.split('Repairs and Service Coverage: ')[1] =~ /^Active/ ? true : false
 			expiration_date = response_body.split('Estimated Expiration Date: ')[1].split('<')[0] if repair_covered == true
+			expiration_date = "EXPIRED" if expiration_date.nil
 			model = response_body.to_s.match(/warrantyPage\.warrantycheck\.displayProductInfo\(.*\)/).to_s.split(',')[1].gsub(/\'/,"").strip
 			warranty_info = {:repair_covered => repair_covered, :expiration_date => expiration_date, :model => model}
 			return warranty_info
