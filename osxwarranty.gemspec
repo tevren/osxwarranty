@@ -14,4 +14,5 @@ Gem::Specification.new do |gem|
   gem.name          = "osxwarranty"
   gem.require_paths = ["lib"]
   gem.version       = OSXwarranty::VERSION
+  gem.add_dependency "httpclient"
 end
