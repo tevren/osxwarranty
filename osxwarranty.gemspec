@@ -4,7 +4,7 @@ require File.expand_path('../lib/osxwarranty/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Anurag Mohanty"]
   gem.email         = ["anurag@columbia.edu"]
-  gem.description   = %q{retrieves warranty info for macs based on serial number}
+  gem.description   = %q{retrieves warranty info for macs based on serial number, uses glarizza's warranty script and chilcote's asdcheck script}
   gem.summary       = %q{retrieves warranty info for macs based on serial number}
   gem.homepage      = "https://github.com/tevren/osxwarranty"
 
