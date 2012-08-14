@@ -1,3 +1,5 @@
+require 'httpclient'
+require 'nokogiri'
 module OSXwarranty
 	class Base
 		# glarizza's get_warranty method (https://github.com/glarizza/scripts/blob/master/ruby/warranty.rb)
