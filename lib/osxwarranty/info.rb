@@ -27,7 +27,7 @@ module OSXwarranty
 				asd_array = line.split(":")
 				asd_hash[asd_array[0]] = asd_array[1].gsub("\n","")
 		    end
-		    return asd_hash[:model]
+		    return asd_hash[model]
 		end
 	end
 end
