@@ -18,7 +18,15 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+	osx = OSXwarranty::Base.new
+
+	osx.info("SERIAL_NUMBER")
+
+	if you want warranty info without the asd info:
+
+	osx.get_warranty_info("SERIAL_NUMBER")
+
+
 
 ## Contributing
 
