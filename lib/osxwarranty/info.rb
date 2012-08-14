@@ -1,7 +1,6 @@
-require 'HTTPClient'
 module OSXwarranty
 	class Info
-
+		include HTTPClient
 		# glarizza's get_warranty method (https://github.com/glarizza/scripts/blob/master/ruby/warranty.rb)
 		def warranty(serial = nil)
 			@serial = serial
@@ -29,6 +28,7 @@ module OSXwarranty
 				asd_array = line.split(":")
 				asd_hash[asd_array[0]] = asd_array[1].gsub("\n","")
 		    end
+		    return asd_hash
 		end
 	end
 end

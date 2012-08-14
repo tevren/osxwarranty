@@ -1,3 +1,4 @@
+require "httpclient"
 require "osxwarranty/version"
 require "osxwarranty/info"
 module OSXwarranty
