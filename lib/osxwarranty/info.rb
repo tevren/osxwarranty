@@ -23,7 +23,7 @@ module OSXwarranty
 		# chilcote's asdcheck (https://github.com/chilcote/warranty/blob/master/asdcheck)
 		def asdcheck(model)
 		    asd_hash = Hash.new
-			`curl -k -s https://raw.github.com/tevren/warranty/master/asdcheck`.each_line do |line|
+			HTTPClient.get("https://raw.github.com/tevren/warranty/master/asdcheck").body.each_line do |line|
 				asd_array = line.split(":")
 				asd_hash[asd_array[0]] = asd_array[1].gsub("\n","")
 		    end
