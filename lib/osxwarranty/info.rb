@@ -1,3 +1,4 @@
+require 'HTTPClient'
 module OSXwarranty
 	class Info
 
