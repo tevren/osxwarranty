@@ -1,4 +1,4 @@
-# Osxwarranty
+# OSXwarranty
 
 TODO: Write a gem description
 

@@ -1,3 +1,3 @@
-module Osxwarranty
+module OSXwarranty
   VERSION = "0.0.1"
 end
