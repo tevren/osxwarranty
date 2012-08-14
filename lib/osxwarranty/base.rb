@@ -1,5 +1,5 @@
 module OSXwarranty
-	class Info
+	class Base
 		# glarizza's get_warranty method (https://github.com/glarizza/scripts/blob/master/ruby/warranty.rb)
 		def warranty(serial = nil)
 			@serial = serial

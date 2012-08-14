@@ -1,6 +1,6 @@
 require "httpclient"
 require "osxwarranty/version"
-require "osxwarranty/info"
+require "osxwarranty/base"
 module OSXwarranty
   # Your code goes here...
 end
