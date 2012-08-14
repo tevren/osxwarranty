@@ -24,9 +24,14 @@ If you want warranty info as well as asd info:
 	osx.info("SERIAL_NUMBER")
 
 if you want warranty info without the asd info:
+	osx = OSXwarranty::Base.new
 
 	osx.get_warranty_info("SERIAL_NUMBER")
 
+If you want just the model info:
+	osx = OSXwarranty::Base.new
+
+	osx.get_model_info("SERIAL_NUMBER")	
 
 
 ## Contributing
