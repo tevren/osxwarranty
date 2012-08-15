@@ -19,7 +19,8 @@ describe OSXwarranty do
 	end
 	describe "#asdcheck" do
 		it "should not be nil" do
-		  @warranty.asdcheck(@model).size.should_not be_nil 
+		  @warranty.asdcheck(@model).size.should_not be_nil
+		  @warranty.asdcheck("Xserve_Late_2006").should include("3X102")
 		end
 	end
 

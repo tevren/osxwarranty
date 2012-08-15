@@ -1,5 +1,6 @@
 require 'httpclient'
 require 'nokogiri'
+require 'yaml'
 module OSXwarranty
 	class Base
 		# glarizza's get_warranty method (https://github.com/glarizza/scripts/blob/master/ruby/warranty.rb)
@@ -38,12 +39,9 @@ module OSXwarranty
 		end
 		# chilcote's asdcheck (https://github.com/chilcote/warranty/blob/master/asdcheck)
 		def asdcheck(model)
-		    asd_hash = Hash.new
-			HTTPClient.get("https://raw.github.com/tevren/warranty/master/asdcheck").body.each_line do |line|
-				asd_array = line.split(":")
-				asd_hash[asd_array[0]] = asd_array[1].gsub("\n","")
-		    end
-		    return asd_hash[model]
+			asd_hash = YAML.load_file(File.join(File.dirname(__FILE__),"../config/asdcheck.yml"))
+			search_q = model.gsub(" ", "_").gsub("(","").gsub(")","").gsub("-","_").gsub(",","_").gsub(".","_")
+	 		return asd_hash[search_q]
 		end
 	end
 end
